@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cover Mobil Avanza — Order</title>
+  <meta name="description" content="Cover Mobil Avanza | Pilih beli via Shopee atau chat/order lewat WhatsApp. Mudah & cepat." />
+  <meta property="og:title" content="Cover Mobil Avanza — Order" />
+  <meta property="og:description" content="Cover Mobil Avanza | Pilih beli via Shopee atau chat/order lewat WhatsApp. Mudah & cepat." />
+  <meta property="og:image" content="https://via.placeholder.com/800x420.png?text=Cover+Mobil+Avanza" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#10b981;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:480px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg, #071029 0%, #041428 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      font-size:16px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      text-align:center;
+    }
+
+    .avatar{
+      width:96px;height:96px;border-radius:18px;
+      margin:0 auto 14px;
+      overflow:hidden;
+      border:2px solid rgba(255,255,255,0.06);
+      background:linear-gradient(90deg,#0ea5a5,#7c3aed);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:24px;
+    }
+
+    h1{margin:6px 0 4px;font-size:20px}
+    p.lead{margin:0 0 18px;color:var(--muted);font-size:14px}
+
+    .links{display:flex;flex-direction:column;gap:12px;padding:6px 2px 0}
+    .btn{
+      display:flex;gap:12px;align-items:center;justify-content:center;
+      padding:14px 16px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.03);
+      color:inherit;text-decoration:none;font-weight:600;transition:transform .12s ease, box-shadow .12s ease;
+      box-shadow: 0 4px 14px rgba(2,6,23,0.45);
+    }
+    .btn:hover{transform:translateY(-4px)}
+    .btn .icon{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;opacity:0.95}
+    .btn.shopee{border-left:4px solid #f97316}
+    .btn.wa{border-left:4px solid #22c55e}
+    .btn.secondary{background:var(--glass);border:1px dashed rgba(255,255,255,0.03);color:var(--muted);font-weight:700}
+
+    .meta{
+      margin-top:16px;color:var(--muted);font-size:13px;
+      display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;
+    }
+    .meta small{opacity:.9}
+
+    .qr-row{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:14px}
+    .qr{width:82px;height:82px;border-radius:10px;background:#061425;display:flex;align-items:center;justify-content:center;padding:8px;border:1px solid rgba(255,255,255,0.03)}
+    .subtle{font-size:12px;color:var(--muted)}
+
+    /* mobile adjustments */
+    @media (max-width:420px){
+      .wrap{padding:20px;border-radius:16px}
+      .avatar{width:80px;height:80px;border-radius:14px}
+      .btn{padding:12px 12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="avatar" aria-hidden="true">AVZ</div>
+    <h1>Cover Mobil — Toyota Avanza</h1>
+    <p class="lead">Lindungi mobilmu dengan cover custom: tahan air, UV protection, & cutting fit untuk Avanza.</p>
+
+    <div class="links">
+      <!--
+        GANTI: Ubah SHOPEE_URL dan PHONE_NUMBER di akhir file (JS bagian).
+        Contoh nomor: 6281234567890 (untuk Indonesia, tanpa + / 0 awal)
+      -->
+
+      <a class="btn shopee" id="btnShopee" href="#" target="_blank" rel="noopener noreferrer" title="Beli via Shopee">
+        <span class="icon" aria-hidden="true">
+          <!-- Shopee-style bag icon (SVG) -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/><path d="M16 6a4 4 0 0 0-8 0"/></svg>
+        </span>
+        <span>Beli via Shopee</span>
+      </a>
+
+      <a class="btn wa" id="btnWAOrder" href="#" target="_blank" rel="noopener noreferrer" title="Pesan via WhatsApp - Order">
+        <span class="icon" aria-hidden="true">
+          <!-- WhatsApp SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5A9 9 0 1 1 11.5 3a.9.9 0 0 1 .9.9V7a.9.9 0 0 1-.9.9A4.6 4.6 0 0 0 7 12.5a4.6 4.6 0 0 0 4.6 4.6c.6 0 1.1-.1 1.6-.3a.9.9 0 0 1 .9.2l2.1 2.1a.9.9 0 0 0 1.6-.6V12.8a.9.9 0 0 1 .3-.8z"/></svg>
+        </span>
+        <span>Pesan via WhatsApp — Order</span>
+      </a>
+
+      <a class="btn secondary" id="btnWAChat" href="#" target="_blank" rel="noopener noreferrer" title="Chat via WhatsApp">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5A9 9 0 1 1 11.5 3a.9.9 0 0 1 .9.9V7"/></svg>
+        </span>
+        <span>Konsultasi via WhatsApp</span>
+      </a>
+    </div>
+
+    <div class="meta">
+      <small>Harga mulai: <strong>Rp 250.000</strong></small>
+      <small>•</small>
+      <small>Ready stock / Custom</small>
+    </div>
+
+    <div class="qr-row">
+      <div class="qr" id="qrBox">
+        <!-- QR image akan diisi via JS -->
+        <img id="qrImg" src="" alt="QR code" style="max-width:100%;border-radius:8px"/>
+      </div>
+      <div style="text-align:left">
+        <div class="subtle">Scan untuk pesan cepat</div>
+        <div style="margin-top:8px">
+          <button id="copyBtn" class="btn secondary" style="padding:8px 12px;font-size:13px">Salin Link</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;font-size:12px;color:var(--muted)">
+      <div>Pesan otomatis WhatsApp: <em>"Saya mau pesan cover Avanza — ukuran standar"</em></div>
+    </div>
+  </div>
+
+  <script>
+    /* ========== GANTI KONFIGURASI DI SINI ========== */
+    const SHOPEE_URL = "https://shopee.co.id/example-product"; // <-- Ganti dengan link Shopee aslinya
+    const PHONE_NUMBER = "6281234567890"; // <-- Ganti: nomor WhatsApp (format internasional tanpa +). Contoh: 62812...
+    const WHATSAPP_ORDER_MESSAGE = "Halo, saya mau order Cover Mobil Avanza (ukuran standar). Tolong infokan ketersediaan & harga."; // pesan pra-isian untuk Order
+    const WHATSAPP_CHAT_MESSAGE = "Halo, saya mau tanya tentang cover Avanza."; // pesan pra-isian untuk chat/konsultasi
+
+    /* Tombol link */
+    const btnShopee = document.getElementById("btnShopee");
+    const btnWAOrder = document.getElementById("btnWAOrder");
+    const btnWAChat = document.getElementById("btnWAChat");
+    const qrImg = document.getElementById("qrImg");
+    const copyBtn = document.getElementById("copyBtn");
+
+    // Siapkan URL WhatsApp menggunakan wa.me
+    function waLink(phone, text){
+      const encoded = encodeURIComponent(text || "");
+      return "https://wa.me/" + phone + (text ? "?text=" + encoded : "");
+    }
+
+    // Set hrefs
+    btnShopee.href = SHOPEE_URL;
+    btnWAOrder.href = waLink(PHONE_NUMBER, WHATSAPP_ORDER_MESSAGE);
+    btnWAChat.href = waLink(PHONE_NUMBER, WHATSAPP_CHAT_MESSAGE);
+
+    // Default QR: ke halaman Shopee (prioritas), kalau kosong ke WA order
+    const qrTarget = SHOPEE_URL || waLink(PHONE_NUMBER, WHATSAPP_ORDER_MESSAGE);
+    // Gunakan Google Chart API untuk membuat QR sederhana
+    qrImg.src = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + encodeURIComponent(qrTarget) + "&choe=UTF-8";
+
+    // Copy link (salin link Shopee jika ada, kalau tidak salin WA order)
+    copyBtn.addEventListener("click", async () => {
+      const textToCopy = SHOPEE_URL || waLink(PHONE_NUMBER, WHATSAPP_ORDER_MESSAGE);
+      if (!textToCopy) {
+        alert("Silakan isi SHOPEE_URL atau PHONE_NUMBER pada konfigurasi di file.");
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        copyBtn.textContent = "Tersalin!";
+        setTimeout(()=> copyBtn.textContent = "Salin Link", 1600);
+      } catch (e) {
+        // fallback
+        prompt("Salin manual link berikut:", textToCopy);
+      }
+    });
+
+    // Accessibility: enter keyboard click behavior
+    [btnShopee, btnWAOrder, btnWAChat].forEach(el => {
+      el.addEventListener("keydown", e => {
+        if (e.key === "Enter") el.click();
+      });
+    });
+
+    // If user hasn't replaced placeholders, give visible hint in console
+    if (SHOPEE_URL.includes("example-product") || PHONE_NUMBER === "6281234567890") {
+      console.info("⚠️ Ingat: ganti SHOPEE_URL dan PHONE_NUMBER di bagian konfigurasi script sebelum publikasi.");
+    }
+  </script>
+</body>
+</html>
